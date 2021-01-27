@@ -3,6 +3,8 @@ import Cont1 from './images/cont1.png';
 import Cont2 from './images/cont1.png';
 import Cont3 from './images/cont1.png';
 import Photo from './Photo';
+import {useState, useEffect} from "react";
+import axios from 'axios';
 function Recent(){
     return(
         <div>
@@ -27,21 +29,21 @@ function Recent(){
         </div>
         <div class="col-3">
         <div class="card" style={{width:"250px"}}>
-                <Photo photo={Cont1} topic="THE NEW NUTRITION CLUB" content="Internet Marketing Ninjas has 
+                <Photo topic="THE NEW NUTRITION CLUB" content="Internet Marketing Ninjas has 
                 mastered the art of creating expert content that goes viral, earns trusted links" 
                 comm="1April           5Comments"/>
             </div>
         </div>
         <div class="col-3">
             <div class="card" style={{width:"250px"}}>
-                <Photo photo={Cont2} topic="THE NEW NUTRITION CLUB" content="Internet Marketing Ninjas has 
+                <Photo topic="THE NEW NUTRITION CLUB" content="Internet Marketing Ninjas has 
                 mastered the art of creating expert content that goes viral, earns trusted links" 
                 comm="1April           5Comments"/>
             </div>
         </div>
         <div class="col-3">
         <div class="card" style={{width:"250px"}}>
-                <Photo photo={Cont3} topic="THE NEW NUTRITION CLUB" content="Internet Marketing Ninjas has 
+                <Photo topic="THE NEW NUTRITION CLUB" content="Internet Marketing Ninjas has 
                 mastered the art of creating expert content that goes viral, earns trusted links" 
                 comm="1April           5Comments"/>
             </div>
