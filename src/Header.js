@@ -1,4 +1,5 @@
 import './Web.css';
+import Menu from './Menu';
 import Logo from './images/image.png';
 function Header(){
     return (
@@ -11,24 +12,12 @@ function Header(){
                     <div class="col-lg-8 text-white">
                         <div class="navbar-collapse collapse justify-content-center order-2">
                             <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">HOME</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">HERBALIFE</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">STORE</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">GALLERY</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">BLOG</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">CONTACT US</a>
-                                </li>
+                                <Menu link="HOME"/>
+                                <Menu link="HERBALIFE"/>
+                                <Menu link = "STORE"/>
+                                <Menu link = "GALLERY"/>
+                                <Menu link = "BLOG"/>
+                                <Menu link = "CONTACT US"/>
                             </ul>
                         </div>
                     </div>

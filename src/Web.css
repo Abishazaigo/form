@@ -18,11 +18,6 @@
     color: black;
 }
 
-.bgimage {
-    height: 50%;
-    width: 100%;
-    position: relative;
-}
 
 .image2 {
     opacity: 0.5;
@@ -31,7 +26,7 @@
     height: 200px;
     width: 455px;
     position: absolute;
-    margin-top: -25px;
+    margin-top: -10px;
     margin-left: -25px;
 }
 
