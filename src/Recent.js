@@ -1,16 +1,24 @@
 import './Web.css';
-import Cont1 from './images/cont1.png';
-import Cont2 from './images/cont1.png';
-import Cont3 from './images/cont1.png';
-import Photo from './Photo';
 import {useState, useEffect} from "react";
 import axios from 'axios';
+import Posts from './Posts';
 function Recent(){
+    const [posts, setPosts] = useState([]);
+    useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => {
+        console.log(res.data);
+        setPosts(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
     return(
         <div>
         <div class="row">
         <div class="col-2">
-
         </div>
         <div class="col-4">
             <p class="p1">RECENT NEWS</p>
@@ -20,38 +28,9 @@ function Recent(){
             <button class="top-end">VIEW MORE</button>
         </div>
         <div class="col-2">
-
         </div>
     </div>
-    <div class="row">
-        <div class="col-2">
-
-        </div>
-        <div class="col-3">
-        <div class="card" style={{width:"250px"}}>
-                <Photo topic="THE NEW NUTRITION CLUB" content="Internet Marketing Ninjas has 
-                mastered the art of creating expert content that goes viral, earns trusted links" 
-                comm="1April           5Comments"/>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card" style={{width:"250px"}}>
-                <Photo topic="THE NEW NUTRITION CLUB" content="Internet Marketing Ninjas has 
-                mastered the art of creating expert content that goes viral, earns trusted links" 
-                comm="1April           5Comments"/>
-            </div>
-        </div>
-        <div class="col-3">
-        <div class="card" style={{width:"250px"}}>
-                <Photo topic="THE NEW NUTRITION CLUB" content="Internet Marketing Ninjas has 
-                mastered the art of creating expert content that goes viral, earns trusted links" 
-                comm="1April           5Comments"/>
-            </div>
-        </div>
-        <div class="col-1">
-
-        </div>
-    </div>
+        {posts && posts.length > 0 && <Posts posts={posts} />}
     </div>
     )
 }
